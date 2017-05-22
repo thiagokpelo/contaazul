@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ek+Mukta:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/bundle.css">
+
+  <title>ContaAzul - Desafio Front</title>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>ContaAzul</h1>
+    </div>
+  </header>
+  <main class="container">
+    <div class="actions">
+      <button class="button success">Novo Carro</button>
+      <div class="input">
+        <input placeholder="Pesquisar">
+        <div class="addon"><i class="fa fa-search" aria-hidden="true"></i></div>
+      </div>
+    </div>
+    <div class="table">
+      <table>
+        <thead>
+          <tr>
+            <th><input id="inputAll" type="checkbox"><label for="inputAll"></label></th>
+            <th>Placa</th>
+            <th>Modelo</th>
+            <th>Marca</th>
+            <th>Foto</th>
+            <th>Combustível</th>
+            <th>Valor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input id="input1" type="checkbox"><label for="input1"></label></td>
+            <td>AAA001</td>
+            <td>Gol</td>
+            <td>Wolksvagem</td>
+            <td>Sem foto</td>
+            <td>Gasolina</td>
+            <td>20.000,00</td>
+          </tr>
+          <tr>
+            <td><input id="input2" type="checkbox"><label for="input2"></label></td>
+            <td>AAA001</td>
+            <td>Gol</td>
+            <td>Wolksvagem</td>
+            <td>Sem foto</td>
+            <td>Gasolina</td>
+            <td>20.000,00</td>
+          </tr>
+          <tr>
+            <td><input id="input3" type="checkbox"><label for="input3"></label></td>
+            <td>AAA001</td>
+            <td>Gol</td>
+            <td>Wolksvagem</td>
+            <td><a href="#">Imagem</a></td>
+            <td>Gasolina</td>
+            <td>20.000,00</td>
+          </tr>
+          <tr>
+            <td><input id="input4" type="checkbox"><label for="input4"></label></td>
+            <td>AAA001</td>
+            <td>Gol</td>
+            <td>Wolksvagem</td>
+            <td><a href="#">Imagem</a></td>
+            <td>Gasolina</td>
+            <td>20.000,00</td>
+          </tr>
+          <tr class="selected">
+            <td><input id="input5" type="checkbox"><label for="input5"></label></td>
+            <td>AAA001</td>
+            <td>Gol</td>
+            <td>Wolksvagem</td>
+            <td>Sem foto</td>
+            <td>Gasolina</td>
+            <td>20.000,00</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <footer>
+      <nav class="buttons-group">
+        <button><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>
+        <button class="selected">1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+        <button><i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+      </nav>
+    </footer>
+  </main>
+  <footer></footer>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "contaazul",
+  "version": "0.0.1",
+  "description": "Desafio Front-end",
+  "main": "index.js",
+  "scripts": {
+    "styl": "stylus -u rupture -u jeet -w ./assets/stylus/general.styl -o ./assets/css/bundle.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thiago Capelo",
+  "license": "ISC",
+  "devDependencies": {
+    "rupture": "^0.6.2",
+    "jeet": "^7.1.0",
+    "stylus": "^0.54.5"
+  }
+}
