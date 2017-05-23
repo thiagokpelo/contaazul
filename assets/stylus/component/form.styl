@@ -1,8 +1,14 @@
+form
+  dt
+    + dd
+      margin: 5px 0 10px
+  
+  footer
+    margin-top: 20px
+
 .input
   position: relative
-  display: table
   width: 220px
-  float: right
 
   .addon
     position: absolute;
@@ -14,7 +20,7 @@
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     background-color: #f1f4f9
-    line-height: 2.7em;
+    line-height: 2.8em;
 
 input
   height: 40px
@@ -38,3 +44,31 @@ input
 &::-ms-input-placeholder
   color: #b1b6bd
   opacity: 1
+
+.select
+  position: relative
+
+  &:after
+    content: ''
+    background: transparent url(../img/arrow-down.png) no-repeat
+    background-size: 30px;
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+
+  select
+    position: relative
+    display: block
+    height: 40px
+    width: 100%
+    -webkit-appearance:none
+    -moz-appearance:none
+    appearance:none
+    background: #fff
+    border: 1px solid #c9d3dd
+    padding: 10px
+    border-radius: 5px
+    color: #2a6392

@@ -1,5 +1,4 @@
 .button
-  float: left
   height: 40px
   width: 140px
   border: 0
@@ -8,6 +7,9 @@
   color: #fff
   font-weight: 600
   cursor: pointer
+
+  &.danger
+    background-color: #b62639
 
   &.success
     background-color: #4aba58
@@ -43,3 +45,8 @@
 
     + button
       margin-left: -1px
+
+footer
+  button
+    + button
+      margin-left: 10px

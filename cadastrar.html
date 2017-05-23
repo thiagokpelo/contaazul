@@ -19,31 +19,37 @@
     </div>
   </header>
   <main class="container">
-    <div class="actions">
+    <div class="page-title">
       <h1>Cadastrar</h1>
+      <hr>
     </div>
-    <figure>
-      <img src="" alt="">
-      <fieldset></fieldset>
-    </figure>
     <form>
       <fieldset>
-        <legend></legend>
+        <legend class="hide">Formulário de cadastro</legend>
         <dl>
           <dt><label for="">Marca*</label></dt>
-          <dd><input type="text"></dd>
+          <dd><input type="text" required></dd>
 
           <dt><label for="">Modelo*</label></dt>
-          <dd><input type="text"></dd>
+          <dd><input type="text" required></dd>
 
           <dt><label for="">Placa</label></dt>
           <dd><input type="text"></dd>
 
-          <dt><label for="">Combustível</label></dt>
+          <dt><label for="">Imagem</label></dt>
           <dd><input type="text"></dd>
 
+          <dt><label for="">Combustível</label></dt>
+          <dd class="select">
+            <select name="" id="">
+              <option value="">Gasolina</option>
+              <option value="">Alcool</option>
+              <option value="">Flex</option>
+            </select>
+          </dd>
+
           <dt><label for="">Valor*</label></dt>
-          <dd><input type="text"></dd>
+          <dd><input type="text" required></dd>
         </dl>
 
         <footer>
@@ -52,7 +58,11 @@
         </footer>
       </fieldset>
     </form>
+    <figure style="background-image: url(http://sweettutos.com/wp-content/uploads/2015/12/placeholder.png)">
+      <img class="hide" src="http://autos.culturamix.com/blog/wp-content/gallery/fusca-uma-paixao-brasileira1/fusca-uma-paixao-brasileira-1.jpg"
+        alt="Fusca uma paixão brasileira">
+      <fieldset class="hide">Fusca uma paixão brasileira</fieldset>
+    </figure>
   </main>
-  <footer></footer>
 </body>
 </html>

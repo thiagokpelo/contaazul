@@ -141,6 +141,21 @@ button:focus {
 a {
   color: #2687e9;
 }
+.hide {
+  display: none;
+  opacity: 0;
+}
+.page-title {
+  margin: 20px 0;
+}
+.page-title h1 {
+  font-size: 2rem;
+}
+.page-title h1 + hr {
+  height: 1px;
+  border: 0;
+  background-color: #c9d3dd;
+}
 .container {
   width: auto;
   max-width: 960px;
@@ -169,11 +184,15 @@ header h1 {
   background: url("../img/logo.png") no-repeat center;
   background-size: 120px auto;
 }
+form dt + dd {
+  margin: 5px 0 10px;
+}
+form footer {
+  margin-top: 20px;
+}
 .input {
   position: relative;
-  display: table;
   width: 220px;
-  float: right;
 }
 .input .addon {
   position: absolute;
@@ -185,7 +204,7 @@ header h1 {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   background-color: #f1f4f9;
-  line-height: 2.7em;
+  line-height: 2.8em;
 }
 input {
   height: 40px;
@@ -213,6 +232,34 @@ input {
 ::-ms-input-placeholder {
   color: #b1b6bd;
   opacity: 1;
+}
+.select {
+  position: relative;
+}
+.select:after {
+  content: '';
+  background: transparent url("../img/arrow-down.png") no-repeat;
+  background-size: 30px;
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+.select select {
+  position: relative;
+  display: block;
+  height: 40px;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #fff;
+  border: 1px solid #c9d3dd;
+  padding: 10px;
+  border-radius: 5px;
+  color: #2a6392;
 }
 [type="checkbox"]:not(:checked),
 [type="checkbox"]:checked {
@@ -254,7 +301,6 @@ input {
   transform: scale(1);
 }
 .button {
-  float: left;
   height: 40px;
   width: 140px;
   border: 0;
@@ -263,6 +309,9 @@ input {
   color: #fff;
   font-weight: 600;
   cursor: pointer;
+}
+.button.danger {
+  background-color: #b62639;
 }
 .button.success {
   background-color: #4aba58;
@@ -298,6 +347,9 @@ input {
 }
 .buttons-group button + button {
   margin-left: -1px;
+}
+footer button + button {
+  margin-left: 10px;
 }
 .table {
   border: 1px solid #c9d3dd;
@@ -349,7 +401,48 @@ td {
   vertical-align: middle;
 }
 .actions {
+  display: flex;
+  justify-content: space-between;
+}
+figure {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 31.33333333333333%;
+  margin-left: 0%;
+  margin-right: 3%;
+  display: block;
+  height: 300px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+figure::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+figure:last-child {
+  margin-right: 0%;
+}
+form {
+  float: left;
+  clear: none;
+  text-align: inherit;
+  width: 65.66666666666666%;
+  margin-left: 0%;
+  margin-right: 3%;
+  display: block;
+}
+form::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+form:last-child {
+  margin-right: 0%;
+}
+img {
   width: 100%;
-  margin: 20px 0;
-  overflow: auto;
 }
