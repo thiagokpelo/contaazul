@@ -1,0 +1,9 @@
+<div class="page-title actions">
+  <button class="button success" routerLink="/novo">Novo Carro</button>
+  <div class="input">
+    <input placeholder="Pesquisar" #txtFilter (keyup)="0">
+    <div class="addon"><i class="fa fa-search" aria-hidden="true"></i></div>
+  </div>  
+</div>
+
+<app-table [cars]="cars" [textFilter]="txtFilter.value"></app-table>
