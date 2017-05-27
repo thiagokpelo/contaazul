@@ -2,45 +2,6 @@
   <h1>Cadastrar</h1>
   <hr>
 </div>
-<div class="content">
-  <form [formGroup]="createForm" (submit)="create($event)">
-    <fieldset>
-      <legend class="hide">Formulário de cadastro</legend>
-      <dl>
-        <dt><label for="">Marca*</label></dt>
-        <dd><input type="text" name="marca" [(ngModel)]="car.marca" required></dd>
 
-        <dt><label for="">Modelo*</label></dt>
-        <dd><input type="text" name="modelo" [(ngModel)]="car.modelo" required></dd>
-
-        <dt><label for="">Placa*</label></dt>
-        <dd><input type="text" name="placa" [(ngModel)]="car.placa" required></dd>
-
-        <dt><label for="">Imagem</label></dt>
-        <dd><input type="text" name="imagem" [(ngModel)]="car.imagem"></dd>
-
-        <dt><label for="">Combustível</label></dt>
-        <dd class="select">
-          <select name="combustivel" id="" [(ngModel)]="car.combustivel">
-                <option value="gasolina">Gasolina</option>
-                <option value="alcool">Alcool</option>
-                <option value="flex">Flex</option>
-              </select>
-        </dd>
-
-        <dt><label for="">Valor</label></dt>
-        <dd><input type="text"name="valor" [(ngModel)]="car.valor"></dd>
-      </dl>
-
-      <footer>
-        <button class="button" routerLink="">Cancelar</button>
-        <button type="submit" class="button success" [disabled]="createForm.invalid">Cadastrar</button>
-      </footer>
-    </fieldset>
-  </form>
-  <figure style="background-image: url(http://sweettutos.com/wp-content/uploads/2015/12/placeholder.png)">
-    <img class="hide" src="http://autos.culturamix.com/blog/wp-content/gallery/fusca-uma-paixao-brasileira1/fusca-uma-paixao-brasileira-1.jpg"
-      alt="Fusca uma paixão brasileira">
-    <fieldset class="hide">Fusca uma paixão brasileira</fieldset>
-  </figure>
-</div>
+<app-alert [show]="showMessage" type="success">Veículo adicionado com sucesso!!!</app-alert>
+<app-form (sendEventCar)="create($event)"></app-form>

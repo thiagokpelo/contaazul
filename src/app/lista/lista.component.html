@@ -6,4 +6,4 @@
   </div>  
 </div>
 
-<app-table [cars]="cars" [textFilter]="txtFilter.value"></app-table>
+<app-table [cars]="cars" [textFilter]="txtFilter.value" (actionRemove)="removeCar($event)"></app-table>

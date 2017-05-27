@@ -1,0 +1,55 @@
+<div class="content">
+
+  <form [formGroup]="createForm" (ngSubmit)="create($event)" novalidate>
+    <fieldset>
+      <legend class="hide">Formulário de cadastro</legend>
+      <dl>
+        <dt><label for="">Modelo*</label></dt>
+        <dd>
+          <input name="modelo" type="text" [(ngModel)]="car.modelo" formControlName="modelo" placeholder="Gol">
+          <span *ngIf="createForm.controls.modelo.invalid && createForm.controls.modelo.touched" class="alert danger">Campo obrigatório</span>
+        </dd>
+        
+        <dt><label for="">Marca*</label></dt>
+        <dd>
+          <input name="marca" type="text" [(ngModel)]="car.marca" formControlName="marca" placeholder="Volkswagen">
+          <span *ngIf="createForm.controls.marca.invalid && createForm.controls.marca.touched" class="alert danger">Campo obrigatório</span>
+        </dd>
+
+        <dt><label for="">Placa*</label></dt>
+        <dd>
+          <input name="placa" type="text" [(ngModel)]="car.placa" formControlName="placa" maxlength="8" required
+            placeholder="ABC-0123">
+          <div *ngIf="createForm.controls.placa.errors && createForm.controls.placa.touched">
+            <span [hidden]="!createForm.controls.placa.errors.required" class="alert danger">Campo obrigatório</span>
+            <span [hidden]="!createForm.controls.placa.errors.pattern" class="alert danger">A placa esta incorreta</span>
+          </div>
+        </dd>
+
+        <dt><label for="">Imagem</label></dt>
+        <dd><input name="imagem" type="text" [(ngModel)]="car.imagem" formControlName="imagem" placeholder="URL"></dd>
+
+        <dt><label for="">Combustível</label></dt>
+        <dd class="select">
+          <select name="combustivel" [(ngModel)]="car.combustivel" formControlName="combustivel">
+                  <option value="" disabled selected="selected">-- Selecione um combustível --</option>
+                  <option value="gasolina">Gasolina</option>
+                  <option value="alcool">Alcool</option>
+                  <option value="flex">Flex</option>
+            </select>
+        </dd>
+
+        <dt><label for="">Valor</label></dt>
+        <dd><input name="valor" type="number" [(ngModel)]="car.valor" formControlName="valor" placeholder="200000"></dd>
+      </dl>
+
+      <footer>
+        <button class="button" routerLink=""><i class="fa fa-angle-left fa-2x" aria-hidden="true"></i> Voltar</button>
+        <button type="submit" class="button success" [disabled]="createForm.invalid">Salvar</button>
+      </footer>
+    </fieldset>
+  </form>
+
+  <app-figure [url]="car.imagem || 'http://sweettutos.com/wp-content/uploads/2015/12/placeholder.png'"></app-figure>
+
+</div>

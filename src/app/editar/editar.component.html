@@ -1,0 +1,7 @@
+<div class="page-title">
+  <h1>Editar</h1>
+  <hr>
+</div>
+
+<app-alert [show]="showMessage" type="success">Veículo atualizado com sucesso!!!</app-alert>
+<app-form (sendEventCar)="update($event)" [editCar]="car"></app-form>

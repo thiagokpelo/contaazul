@@ -1,29 +1,25 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Component, OnInit, Output } from '@angular/core';
 
-import { CarService } from './../car/car.service';
-import { Car } from './../car/car.class';
+import { CarService }                from '../shared/car/car.service';
+import { Car }                       from '../shared/car/car.model';
 
 @Component({
-  selector: 'app-novo',
-  templateUrl: './novo.component.html',
-  styleUrls: ['./novo.component.styl']
+    selector: 'app-novo',
+    templateUrl: './novo.component.html',
+    styleUrls: ['./novo.component.styl']
 })
 export class NovoComponent implements OnInit {
 
-  createForm: FormGroup;
-  private car:        Car;
+    private carService:  CarService = new CarService();
+    private showMessage: boolean    = false;
 
-  constructor(service: CarService, formBuilder: FormBuilder) {
-  }
+    constructor() {}
 
-  create(event) {
+    create( car: Car ) {
+        this.carService.create( car );
+        this.showMessage = true;
+    }
 
-    event.preventDefault();
-    console.log(this.car);
-  }
-
-  ngOnInit() {
-  }
+    ngOnInit() {}
 
 }

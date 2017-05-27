@@ -1,0 +1,62 @@
+.table
+  border: 1px solid #c9d3dd
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+
+.actions
+  width: 0;
+  opacity: 0
+
+  button
+    display: none;
+
+table
+  width: 100%
+  text-align: left
+
+  tr
+    &:not(:last-of-type)
+      border-top: 1px solid #c9d3dd
+      border-bottom: 1px solid #c9d3dd
+
+table
+  th
+  td
+    position: relative
+    padding: 10px
+    text-transform: capitalize
+
+    &:first-of-type
+      text-align: center
+
+    &.right
+      text-align: right
+
+  tbody
+    background-color: #fff
+
+    tr
+      height: 50px
+      &.selected
+        outline: 1px solid #8bc8f6
+        background-color: #d8e9fb!important
+
+        .actions
+          width: 110px
+          opacity: 1
+
+          button
+            display: inline-block
+        
+      &:hover
+        background-color: #fffaeb
+
+thead
+  font-weight: 600
+
+  tr
+    height: 38px
+
+th
+td
+  vertical-align: middle

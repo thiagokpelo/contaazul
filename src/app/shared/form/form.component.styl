@@ -1,0 +1,30 @@
+.content
+  display: flex  
+
+form
+  flex-grow: 4
+
+  dt
+    + dd
+      position: relative
+      margin: 5px 0 10px
+
+      .alert
+        position: absolute
+        top: 0
+        right: 0
+        padding: 13px 20px
+        border-top-right-radius: 5px
+        border-bottom-right-radius: 5px
+        color: #fff
+
+        &.danger
+          background-color: #a94557
+
+  button
+    .fa
+      vertical-align: sub
+      margin-right: 10px
+  
+  footer
+    margin-top: 20px
