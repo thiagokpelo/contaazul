@@ -11,13 +11,13 @@ import { Car }                    from '../shared/car/car.model';
 })
 export class EditarComponent implements OnInit {
 
-    private router:      Router;
-    private route:       ActivatedRoute;
+    router:      Router;
+    route:       ActivatedRoute;
 
-    private carService:  CarService     = new CarService();
-    private showMessage: boolean        = false;
+    carService:  CarService     = new CarService();
+    showMessage: boolean        = false;
 
-    private car:         Car;
+    car:         Car;
 
     constructor(_route: ActivatedRoute) {
 

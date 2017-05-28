@@ -13,8 +13,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let car of cars | filterCar: textFilter | slice: indexSlice():indexSlice() + 5; let i = index; trackBy: index"
-        [ngClass]="{ 'selected': car.check }">
+      <tr *ngFor="let car of cars | filterCar: textFilter | slice: indexSlice():indexSlice() + 5; let i = index;" [ngClass]="{ 'selected': car.check }">
         <td>
           <input [checked]="car.check" id="check-{{ i }}" type="checkbox" (change)="car.check = !car.check">
           <label for="check-{{ i }}"></label>

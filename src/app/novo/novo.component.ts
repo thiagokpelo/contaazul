@@ -10,8 +10,8 @@ import { Car }                       from '../shared/car/car.model';
 })
 export class NovoComponent implements OnInit {
 
-    private carService:  CarService = new CarService();
-    private showMessage: boolean    = false;
+    carService:  CarService = new CarService();
+    showMessage: boolean    = false;
 
     constructor() {}
 

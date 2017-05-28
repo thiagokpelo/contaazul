@@ -18,9 +18,9 @@ export class TableComponent implements OnInit {
     @Input() textFilter:    string;
     @Output() actionRemove: EventEmitter<number> = new EventEmitter();
 
-    private page:           number = 1;
-    private pages:          number[];
-    private checkAll:       boolean = false;
+    page:           number = 1;
+    pages:          number[];
+    checkAll:       boolean = false;
 
     constructor() { }
 
@@ -43,7 +43,7 @@ export class TableComponent implements OnInit {
         return this.pages.indexOf( this.page ) * 5;
     }
 
-    currentPage( index ) {
+    currentPage( index: number ) {
         this.page = index;
     }
 

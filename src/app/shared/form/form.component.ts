@@ -20,8 +20,8 @@ export class FormComponent implements OnInit {
     @Output() sendEventCar: EventEmitter<Car> = new EventEmitter();
     @Input()  editCar:      Car;
 
-    private car:            Car = new Car('', '', '');
-    private createForm:     FormGroup;
+    car:            Car = new Car('', '', '');
+    createForm:     FormGroup;
 
     constructor( private _fb: FormBuilder ) {
     }

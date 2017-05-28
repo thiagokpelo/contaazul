@@ -11,9 +11,9 @@ import { Car }               from '../shared/car/car.model';
 })
 export class ListaComponent implements OnInit {
 
-    private cars:        Car[]      = [];
-    private carService:  CarService = new CarService();
-    private showMessage: boolean   = false;
+    cars:        Car[]      = [];
+    carService:  CarService = new CarService();
+    showMessage: boolean   = false;
 
     constructor() {}
 
