@@ -6,4 +6,5 @@ Projeto desenvolvido em Angular 4 com o [Angular CLI](https://github.com/angular
 Acesse `http://thiagocapelo.com.br/contaazul`.
 
 ## Rodar o Projeto em Dev
+Instale as dependencias `npm install`.
 Rode `ng serve` no terminal. Acesse `http://localhost:4200/`.
