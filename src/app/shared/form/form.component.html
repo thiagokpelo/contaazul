@@ -30,12 +30,12 @@
         <dd><input name="imagem" type="text" [(ngModel)]="car.imagem" formControlName="imagem" placeholder="URL"></dd>
 
         <dt><label for="">Combustível</label></dt>
-        <dd class="select">
+        <dd class="select-box">
           <select name="combustivel" [(ngModel)]="car.combustivel" formControlName="combustivel">
-                  <option value="" disabled selected="selected">-- Selecione um combustível --</option>
-                  <option value="gasolina">Gasolina</option>
-                  <option value="alcool">Alcool</option>
-                  <option value="flex">Flex</option>
+                  <option value="" disabled [selected]="car.combustivel == ''">-- Selecione um combustível --</option>
+                  <option value="gasolina" [selected]="car.combustivel == 'Gasolina'">Gasolina</option>
+                  <option value="alcool" [selected]="car.combustivel == 'Alcool'">Alcool</option>
+                  <option value="flex" [selected]="car.combustivel == 'Flex'">Flex</option>
             </select>
         </dd>
 

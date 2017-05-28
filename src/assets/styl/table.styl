@@ -1,0 +1,62 @@
+.table
+  @extend .border
+  vendorize(border-top-right-radius, $border-radius-base)
+  vendorize(border-top-left-radius, $border-radius-base)
+
+  .actions
+    width: 0;
+    opacity: 0
+
+    button
+      display: none;
+
+table
+  width: 100%
+  text-align: left
+
+  tr
+    &:not(:last-of-type)
+      border-top: 1px solid $gray-base
+      border-bottom: 1px solid $gray-base
+
+table
+  th
+  td
+    position: relative
+    padding: $space-vertical-base $space-base
+    text-transform: capitalize
+
+    &:first-of-type
+      text-align: center
+
+    &.right
+      text-align: right
+
+  tbody
+    background-color: $white
+
+    tr
+      height: px-to-rem(50px)
+      &.selected
+        outline: 1px solid $blue-pool
+        background-color: $blue-pool-light !important
+
+        .actions
+          width: 110px
+          opacity: 1
+
+          button
+            display: inline-block
+        
+      &:hover
+        background-color: $yellow-light
+
+thead
+  font-weight: $font-bold
+
+  tr
+    height: px-to-rem(38px)
+
+th
+td
+  vertical-align: middle

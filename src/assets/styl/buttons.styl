@@ -1,69 +1,71 @@
 .button
-  height: 40px
+  height: $height-base
   width: 140px
   border: 0
-  border-radius: 5px
-  background-color: #8bc8f6
-  color: #fff
-  font-weight: 600
+  background-color: $blue-light
+  color: $white
+  font-weight: $font-bold
   cursor: pointer
+  vendorize(border-radius, $border-radius-base)
 
   &.danger
-    background-color: #a94557
+    background-color: $red-base
 
   &.success
-    background-color: #4aba58
+    background-color: $green-base
 
 .buttons-group
   display: table
-  margin: 30px auto 0
-  background-color: #fff
+  margin: px-to-rem(30px) auto 0
+  background-color: $white
 
   button
+    @extend .border
+    
     height: 40px
     width: 40px
-    border: 1px solid #c9d3dd
     background-color: transparent
     color: inherit
 
     &.selected
       position: relative
-      border-color: #8bc8f6
-      background-color: #d8e9fb!important
+      border-color: $blue-pool 
+      background-color: $blue-pool-light!important
       z-index: 10
 
     &:hover
-      background-color: #fffaeb
+      background-color: $yellow-light
 
     &:first-of-type
-      border-top-left-radius: 5px;
-      border-bottom-left-radius: 5px;
+      vendorize(border-top-left-radius, $border-radius-base)
+      vendorize(border-bottom-left-radius, $border-radius-base)
 
     &:last-of-type
-      border-top-right-radius: 5px;
-      border-bottom-right-radius: 5px;
+      vendorize(border-top-right-radius, $border-radius-base)
+      vendorize(border-bottom-right-radius, $border-radius-base)
 
     + button
       margin-left: -1px
 
 button
   &:disabled
-    background: #c9d3dd!important
-    color: #fff
+    background: $gray-base!important
+    color: $white
     cursor: no-drop
 
 footer
   button
     + button
-      margin-left: 10px
+      margin-left: $space-base
 
 table
   .actions
     button
-      width: auto
       height: auto;
+      width: auto
       background-color: transparent!important;
-      color: #2687e9
+      color: $blue-vivid 
 
       &.danger
-        color: #a94557
+        color: $red-base
+        

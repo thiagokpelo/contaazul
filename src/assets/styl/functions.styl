@@ -1,0 +1,38 @@
+set-font-size(value) 
+  font-size: value
+
+  if (value not inherit)
+    font-size: remify(value)
+
+remify(value)
+  u = unit(value)
+
+  if (u is 'px')
+    return unit(value / 16, 'rem')
+  else 
+    return unit(value, u)
+
+px-to-rem(value)
+  u = unit(value)
+
+  if (u is 'px')
+    return unit(value / 16, 'rem')
+
+set-placeholder-style(prop, value)
+  &::-webkit-input-placeholder
+    {prop}: value
+  &::-moz-input-placeholder
+    {prop}: value
+
+set-style-font-default(color, size, family, weight)
+  color: color
+  set-font-size(size)
+  font-family: family
+  font-weight: weight
+
+vendorize(property, value)
+  -webkit-{property}: value
+  -moz-{property}: value
+  -ms-{property}: value
+  {property}: value
+  

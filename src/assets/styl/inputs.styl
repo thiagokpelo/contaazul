@@ -1,78 +1,64 @@
 input
-  height: 40px
+select
+  @extend .border
+  
+  position: relative
+  display: block
+  height: px-to-rem(40px)
   width: 100%
-  padding-left: 10px
-  border: 1px solid #c9d3dd
-  border-radius: 5px
+  padding-left: $space-base
+  background-color: $white
+  vendorize(border-radius, $border-radius-base)
 
   &[type=number]
-    -moz-appearance: textfield
-    appearance: textfield
+    vendorize(appearance, textfield)
 
     &::-webkit-inner-spin-button
-      -webkit-appearance: none
+      vendorize(appearance, none)
 
-  &::-webkit-input-placeholder
-    color: #b1b6bd
-    opacity: 1
-  &:-moz-placeholder
-    color: #b1b6bd
-    opacity: 1
-  &::-moz-placeholder
-    color: #b1b6bd
-    opacity: 1
-  &:-ms-input-placeholder
-    color: #b1b6bd
-    opacity: 1
+  &::-webkit-input-placeholder,
+  &:-moz-placeholder,
+  &::-moz-placeholder,
+  &:-ms-input-placeholder,
   &::-ms-input-placeholder
-    color: #b1b6bd
-    opacity: 1
+    @extend .placeholder
 
-.input
+select
+  vendorize(appearance, none)
+
+.input-box
   position: relative
   width: 220px
 
   .addon
+    @extend .border
+
     position: absolute;
     top: 0
     right: 0
-    height: 40px;
-    padding: 0 12px;
-    border: 1px solid #c9d3dd
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    background-color: #f1f4f9
+    height: px-to-rem(40px)
+    padding: 0 $space-base;
+    vendorize(border-top-right-radius, $border-radius-base)
+    vendorize(border-bottom-right-radius, $border-radius-base)
+    background-color: $gray-light
     line-height: 2.8em;
 
-.select
+.select-box
   position: relative
 
   &:after
-    content: ''
-    background: transparent url(./assets/img/arrow-down.png) no-repeat
-    background-size: 30px;
-    width: 30px;
-    height: 30px;
-    display: block;
+    $size-default = 30px;
+
     position: absolute;
-    right: 10px;
-    top: 5px;
+    display: block;
+    top: $space-vertical-p;
+    right: $space-base;
+    height: px-to-rem($size-default);
+    width: $size-default;
+    background: transparent url(./assets/img/arrow-down.png) no-repeat
+    background-size: $size-default;
+    content: ''
 
-  select
-    position: relative
-    display: block
-    height: 40px
-    width: 100%
-    -webkit-appearance:none
-    -moz-appearance:none
-    appearance:none
-    background: #fff
-    border: 1px solid #c9d3dd
-    padding: 10px
-    border-radius: 5px
-    color: #2a6392
-
-/* Base for label styling */
 [type="checkbox"]:not(:checked)
 [type="checkbox"]:checked
   position: absolute
@@ -82,36 +68,34 @@ input
 [type="checkbox"]:checked
   + label
     position: relative
-    padding-left: 1.95em
+    padding-left: $space-m
     cursor: pointer
 
-/* checkbox aspect */
 [type="checkbox"]:not(:checked)
 [type="checkbox"]:checked
   + label
       &:before
-        content: ''
-        position: absolute
-        left: 0
-        top: 2px
-        width: 18px
-        height: 18px
-        border: 1px solid #c9d3dd
-        background: #fff
-        border-radius: 5px
+        @extend .border
 
-/* checked mark aspect */
+        position: absolute
+        top: px-to-rem(2px)
+        left: 0
+        height: px-to-rem(18px)
+        width: 18px
+        background: $white
+        vendorize(border-radius, $border-radius-base)
+        content: ''
+
 [type="checkbox"]:not(:checked)
 [type="checkbox"]:checked
   + label
       &:after
         content: '✔'
         position: absolute
-        left: 5px
-        font-size: 1.3em
+        left: $space-p
+        font-size: px-to-rem(16px)
         transition: all .2s
 
-/* checked mark aspect changes */
 [type="checkbox"]:not(:checked)
   + label
       &:after

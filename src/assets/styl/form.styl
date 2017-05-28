@@ -1,0 +1,30 @@
+.content
+  display: flex  
+
+form
+  flex-grow: 4
+
+  dt
+    + dd
+      position: relative
+      margin: $space-vertical-p 0 $space-vertical-base
+
+      .alert
+        position: absolute
+        top: 0
+        right: 0
+        padding: px-to-rem(13px) $space-m
+        color: $white
+        vendorize(border-top-right-radius, $border-radius-base)
+        vendorize(border-bottom-right-radius, $border-radius-base)
+
+        &.danger
+          background-color: $red-base
+
+  button
+    .fa
+      vertical-align: sub
+      margin-right: $space-base
+  
+  footer
+    margin-top: $space-vertical-m
