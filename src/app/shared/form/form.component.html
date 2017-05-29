@@ -1,19 +1,19 @@
 <div class="content">
 
-  <form [formGroup]="createForm" (ngSubmit)="create($event)" novalidate>
+  <form [formGroup]="createForm" (ngSubmit)="onSubmit($event)" novalidate>
     <fieldset>
       <legend class="hide">Formulário de cadastro</legend>
       <dl>
         <dt><label for="">Modelo*</label></dt>
         <dd>
           <input name="modelo" type="text" [(ngModel)]="car.modelo" formControlName="modelo" placeholder="Gol">
-          <span *ngIf="createForm.controls.modelo.invalid && createForm.controls.modelo.touched" class="alert danger">Campo obrigatório</span>
+          <span *ngIf="createForm.controls.modelo.invalid && createForm.controls.modelo.touched" class="input-alert danger">Campo obrigatório</span>
         </dd>
         
         <dt><label for="">Marca*</label></dt>
         <dd>
           <input name="marca" type="text" [(ngModel)]="car.marca" formControlName="marca" placeholder="Volkswagen">
-          <span *ngIf="createForm.controls.marca.invalid && createForm.controls.marca.touched" class="alert danger">Campo obrigatório</span>
+          <span *ngIf="createForm.controls.marca.invalid && createForm.controls.marca.touched" class="input-alert danger">Campo obrigatório</span>
         </dd>
 
         <dt><label for="">Placa*</label></dt>
@@ -21,8 +21,8 @@
           <input name="placa" type="text" [(ngModel)]="car.placa" formControlName="placa" maxlength="8" required
             placeholder="ABC-0123">
           <div *ngIf="createForm.controls.placa.errors && createForm.controls.placa.touched">
-            <span [hidden]="!createForm.controls.placa.errors.required" class="alert danger">Campo obrigatório</span>
-            <span [hidden]="!createForm.controls.placa.errors.pattern" class="alert danger">A placa esta incorreta</span>
+            <span [hidden]="!createForm.controls.placa.errors.required" class="input-alert danger">Campo obrigatório</span>
+            <span [hidden]="!createForm.controls.placa.errors.pattern" class="input-alert danger">A placa esta incorreta</span>
           </div>
         </dd>
 

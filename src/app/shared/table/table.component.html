@@ -28,7 +28,7 @@
           </ng-template>
         </td>
         <td>{{ car.combustivel }}</td>
-        <td class="right">{{ car.valor | number:'2.2' }}</td>
+        <td class="right">{{ car.valor | numberBr }}</td>
         <td class="actions right">
           <button class="button" routerLink="/editar/{{ i }}"><i class="fa fa-2x fa-pencil-square-o" aria-hidden="true"></i></button>
           <button class="button danger" (click)="sendIndex(i)"><i class="fa fa-2x fa-trash" aria-hidden="true"></i></button>

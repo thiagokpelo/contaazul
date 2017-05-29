@@ -45,16 +45,16 @@ export class FormComponent implements OnInit {
         });
     }
 
-    create($event) {
+    onSubmit($event) {
         $event.preventDefault();
 
         this.sendEventCar.emit( this.car );
-        this.instanceForm();
+
+        if(this.isClearForm())
+            this.instanceForm();
     }
 
-    update($event) {
-        $event.preventDefault();
-        
-        this.sendEventCar.emit( this.car );
+    isClearForm() {
+        return this.editCar == null;
     }
 }
